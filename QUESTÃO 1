@@ -1,0 +1,18 @@
+function contarOcorrencias(arr) {
+    const frequencia = {};
+
+    arr.forEach(numero => {
+        if (frequencia[numero]) {
+            frequencia[numero]++;
+        } else {
+            frequencia[numero] = 1;
+        }
+    });
+
+    return frequencia;
+}
+
+// Exemplo de uso:
+const numeros = [7, 8, 8, 9, 10, 10, 10, 11, 11];
+const resultado = contarOcorrencias(numeros);
+console.log(resultado); // { '7': 1, '8': 2, '9': 1, '10': 3, '11': 2 }
