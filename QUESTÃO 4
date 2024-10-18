@@ -1,0 +1,16 @@
+function ehPalindromo(texto) {
+    // Remover espaços, pontuações e transformar em minúsculas
+    const textoLimpo = texto.toLowerCase().replace(/[\W_]/g, '');
+    
+    // Verificar se o texto é igual ao seu reverso
+    const textoReverso = textoLimpo.split('').reverse().join('');
+    
+    return textoLimpo === textoReverso;
+}
+
+// Exemplo:
+const frase1 = "Ovo";
+const frase2 = "Socorram-me, subi no ônibus em Marrocos";
+
+console.log(ehPalindromo(frase1)); // true
+console.log(ehPalindromo(frase2)); // true
